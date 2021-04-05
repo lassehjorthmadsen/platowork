@@ -15,8 +15,27 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-#library(platowork)
+library(platowork)
+library(ggplot2)
+library(dplyr)
+theme_set(theme_minimal())
 ```
 
 # Introduction
 The package `platowork` provides a small data set with the results of an informal test I did with my son of the tDCS (Transcranial Direct Current Stimulation) headset using speed typing from [10fastfingers.com](https://10fastfingers.com/). 
+
+# Plot
+
+```{r plot}
+data_summary <- plato %>% 
+  group_by(subject, session) %>% 
+  summarise(wpm = mean(wpm),
+            date = mean(date),
+            .groups = "drop")
+
+plato %>% 
+  ggplot(aes(x = date, y = wpm, color = subject)) +
+  geom_point()
+
+```
+
