@@ -5,7 +5,7 @@ library(dplyr)
 library(tidyr)
 
 # Read data from the riginal Excel used for recording
-plato <- read_excel("data-raw/speed type data.xlsx")
+plato <- read_excel("data-raw/speed-type-data.xlsx")
 
 # Add a session id; for each subject we group typing tests
 # not separated by more than 60 mins into same sessions.
