@@ -1,0 +1,22 @@
+---
+title: "Testing the PlatoWork headset"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{testing-platowork}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+#library(platowork)
+```
+
+# Introduction
+The package `platowork` provides a small data set with the results of an informal test I did with my son of the tDCS (Transcranial Direct Current Stimulation) headset using speed typing from [10fastfingers.com](https://10fastfingers.com/). 

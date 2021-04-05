@@ -1,0 +1,32 @@
+# Script for reading and cleaning the original data
+
+library(readxl)
+library(dplyr)
+library(tidyr)
+
+# Read data from the riginal Excel used for recording
+plato <- read_excel("data-raw/speed type data.xlsx")
+
+# Add a session id; for each subject we group typing tests
+# not separated by more than 60 mins into same sessions.
+plato <- plato %>%
+  arrange(subject, date) %>%
+  group_by(subject) %>%
+  mutate(time_diff = difftime(date, lag(date), units = "mins"),
+         session = ifelse(time_diff > 60 | is.na(time_diff), row_number(), NA)) %>%
+  fill(session) %>%
+  mutate(session = dense_rank(session)) %>%
+  select(-time_diff) %>%
+  ungroup()
+
+# Add data file to the package
+usethis::use_data(plato, overwrite = TRUE)
+
+# Check counts
+plato %>%
+  group_by(subject, stimulus, session) %>%
+  summarise(no_tests = n(),
+            first = min(date),
+            last = max(date)) %>%
+  mutate(duration = difftime(last, first, units = "mins")) %>%
+  arrange(subject, first)
