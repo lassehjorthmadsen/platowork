@@ -13,7 +13,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   echo = FALSE,
   message = FALSE,
-  fig.width = 7
+  fig.width = 7,
+  fig.height = 5
 )
 ```
 
@@ -58,7 +59,7 @@ data_summary <- plato %>%
 
 plato %>% 
   ggplot(aes(x = session, y = wpm, color = stimulus)) +
-  geom_point(show.legend = T) +
+  geom_jitter(size = 1.0, width = 0.15, height = 0, show.legend = T) +
   geom_crossbar(data = data_summary, aes(ymin = wpm, ymax = wpm), show.legend = F) +
   scale_x_continuous(breaks = 1:9) +
   facet_grid(rows = vars(subject)) +
