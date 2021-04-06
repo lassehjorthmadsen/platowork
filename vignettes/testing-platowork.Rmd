@@ -1,8 +1,9 @@
 ---
 title: "Testing the PlatoWork headset"
 output: rmarkdown::html_vignette
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 vignette: >
-  %\VignetteIndexEntry{testing-platowork}
+  %\VignetteIndexEntry{Testing the PlatoWork headset}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -10,32 +11,68 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  echo = FALSE,
+  message = FALSE,
+  fig.width = 7
 )
 ```
 
 ```{r setup}
-library(platowork)
+devtools::load_all()
+#library(platowork)
 library(ggplot2)
 library(dplyr)
 theme_set(theme_minimal())
 ```
 
 # Introduction
-The package `platowork` provides a small data set with the results of an informal test I did with my son of the tDCS (Transcranial Direct Current Stimulation) headset using speed typing from [10fastfingers.com](https://10fastfingers.com/). 
+The package `platowork` provides a small data set with the results of an informal test I did with my son of the tDCS (Transcranial Direct Current Stimulation) headset from [PlatoScience](https://www.platoscience.com/). We used the speed typing test available from [10fastfingers.com](https://10fastfingers.com/). 
+
+# Data
+
+The data set is stored in an object called `plato`. Simply type `plato` to see the first few rows, or `?plato` to read a description of the data set.
+
+Each row represents the result of a speed typing test. Each test has a date/time stamp, a subject (the person doing the test), a wpm (words per minute) performance score, an error rate, a stimulus ("none", "A" or "B", where either "A" or "B" is a placebo-like stimuli). Finally, since each test typically was taken several times in a row, we also have a session id. 
+
+Below is a quick summary of the data, with a duration in minutes calculated for the sessions.
+
+```{r data}
+plato %>%
+  group_by(subject, stimulus, session) %>%
+  summarise(no_tests = n(),
+            first_test = min(date),
+            last_test = max(date)) %>%
+  mutate(duration = difftime(last_test, first_test, units = "mins")) %>%
+  select(-last_test) %>% 
+  arrange(subject, first_test)
+```
 
 # Plot
 
 ```{r plot}
 data_summary <- plato %>% 
-  group_by(subject, session) %>% 
+  group_by(subject, session, stimulus) %>% 
   summarise(wpm = mean(wpm),
             date = mean(date),
             .groups = "drop")
 
 plato %>% 
-  ggplot(aes(x = date, y = wpm, color = subject)) +
-  geom_point()
+  ggplot(aes(x = session, y = wpm, color = stimulus)) +
+  geom_point(show.legend = T) +
+  geom_crossbar(data = data_summary, aes(ymin = wpm, ymax = wpm), show.legend = F) +
+  scale_x_continuous(breaks = 1:9) +
+  facet_grid(rows = vars(subject)) +
+  labs(title = "Performance in speed typing tests with or without tDCS stimulus",
+       subtitle = "Two subjects, double blind experiment with unknown stimulus",
+       caption = "Speed typing tests performed at 10fastfingers.com. Analysis by @lassehmadsen",
+       x = "Session number", y = "wpm, words-per-minute") +
+  theme(strip.background = element_rect(fill = grey(0.93), linetype = "blank"),
+        legend.justification = c(1, 0),
+        legend.position = c(1, 0))
+
 
 ```
 
+# Statistical test
+
+# Conclusion

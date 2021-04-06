@@ -21,12 +21,3 @@ plato <- plato %>%
 
 # Add data file to the package
 usethis::use_data(plato, overwrite = TRUE)
-
-# Check counts
-plato %>%
-  group_by(subject, stimulus, session) %>%
-  summarise(no_tests = n(),
-            first = min(date),
-            last = max(date)) %>%
-  mutate(duration = difftime(last, first, units = "mins")) %>%
-  arrange(subject, first)
