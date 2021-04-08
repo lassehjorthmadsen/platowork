@@ -61,7 +61,7 @@ plato %>%
   ggplot(aes(x = session, y = wpm, color = stimulus)) +
   geom_jitter(size = 1.0, width = 0.15, height = 0, show.legend = T) +
   geom_crossbar(data = data_summary, aes(ymin = wpm, ymax = wpm), show.legend = F) +
-  scale_x_continuous(breaks = 1:9) +
+  scale_x_continuous(breaks = 1:11) +
   facet_grid(rows = vars(subject)) +
   labs(title = "Performance in speed typing tests with or without tDCS stimulus",
        subtitle = "Two subjects, double blind experiment with unknown stimulus",
