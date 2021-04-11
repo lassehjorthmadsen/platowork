@@ -6,8 +6,7 @@
 \title{Results of touch type experiment with two subject using
 the PlatoWork tDCS headset for possible improvement of
 learning speed.}
-\format{
-A data frame with 106 rows and 6 variables:
+\format{A data frame with 106 rows and 6 variables:
 \describe{
 \item{date}{time of test}
 \item{subject}{name of person doint the typing test}
@@ -16,8 +15,7 @@ A data frame with 106 rows and 6 variables:
 \item{stimulus}{type of stimulus}
 \item{session}{session id, unique for each subject}
 ...
-}
-}
+}}
 \usage{
 plato
 }
