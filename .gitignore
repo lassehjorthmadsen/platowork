@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 inst/doc
-*.xlsx
+#*.xlsx
+doc
+Meta

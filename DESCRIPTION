@@ -1,13 +1,13 @@
 Package: platowork
-Title: Provides Data from a Small, Informal Test of the PlatoWork tDCS Headset
+Title: Data From a Test of the PlatoWork tDCS Headset
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Lasse",
            family = "Hjorth Madsen",
            role = c("aut", "cre"),
-           email = "lassehjorthmadsen@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: This contains data from an experiment with improving touch typing speed, that I did using the PlatoWork headset produced by PlatoScience.
+           email = "lassehjorthmadsen@gmail.com")
+Description: This contains data from an experiment with improving touch 
+    typing speed, that I did using the PlatoWork headset produced by PlatoScience.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -16,6 +16,5 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
 Suggests: 
-    knitr,
-    rmarkdown
+    knitr
 VignetteBuilder: knitr
