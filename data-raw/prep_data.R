@@ -13,8 +13,10 @@ plato <- read_excel("data-raw/speed-type-data.xlsx")
 plato <- plato %>%
   arrange(subject, date) %>%
   group_by(subject) %>%
-  mutate(time_diff = difftime(date, lag(date), units = "mins"),
-         session = ifelse(time_diff > 60 | is.na(time_diff), row_number(), NA)) %>%
+  mutate(
+    time_diff = difftime(date, lag(date), units = "mins"),
+    session = ifelse(time_diff > 60 | is.na(time_diff), row_number(), NA)
+  ) %>%
   fill(session) %>%
   mutate(session = dense_rank(session)) %>%
   select(-time_diff) %>%
