@@ -3,6 +3,7 @@
 library(readxl)
 library(dplyr)
 library(tidyr)
+library(magick)
 
 # Read data from the riginal Excel used for recording
 plato <- read_excel("data-raw/speed-type-data.xlsx")
@@ -21,3 +22,8 @@ plato <- plato %>%
 
 # Add data file to the package
 usethis::use_data(plato, overwrite = TRUE)
+
+# Fix logo
+image_read("tools/headset.png") %>%
+  image_scale("150") %>%
+  image_write(path = "tools/logo.png", format = "png")

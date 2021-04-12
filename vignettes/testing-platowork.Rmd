@@ -21,6 +21,8 @@ knitr::opts_chunk$set(
 
 # Introduction
 
+<img src="tools/logo.png" align="right"/>
+
 My son and I did an informal test of the tDCS (Transcranial Direct Current Stimulation) headset from [PlatoScience](https://www.platoscience.com/). We used the speed typing test available from [10fastfingers.com](https://10fastfingers.com/). We did a number of test sessions each, usually one per day, with between 4 and 12 tests per session. Each session was performed with either:
 
   - No headset (for some initial benchmark test)
@@ -36,7 +38,7 @@ This vignette can be read from R Studio using: `vignette("testing-platowork")`.
 
 # Data    
 
-In R, the data set is stored as `plato`. In the R Studio console, type `?plato` to read a description of the data set. or simply type `head(plato)` to see the first few rows:
+In R, the data set is stored as `plato`. In the R Studio console, type `?plato` to read a description of the data set, or simply type `head(plato)` to see the first few rows:
 
 ```{r peek, echo=TRUE}
 library(platowork)

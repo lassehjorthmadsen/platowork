@@ -1,0 +1,12 @@
+name: testing-platowork
+title: testing-platowork
+username: lmdn@novonordisk.com
+account: lmdn@novonordisk.com
+server: di-dev.corp.novocorp.net
+hostUrl: https://di-dev.corp.novocorp.net/__api__
+appId: 94
+bundleId: 837
+url: https://di-dev.corp.novocorp.net/content/94/
+when: 1618227800.44854
+asMultiple: FALSE
+asStatic: TRUE

@@ -6,8 +6,8 @@ Authors@R:
            family = "Hjorth Madsen",
            role = c("aut", "cre"),
            email = "lassehjorthmadsen@gmail.com")
-Description: This contains data from an experiment with improving touch 
-    typing speed, that I did using the PlatoWork headset produced by PlatoScience.
+Description: This package contains data from an experiment with improving touch 
+    typing speed, using the PlatoWork headset produced by PlatoScience.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
