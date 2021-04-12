@@ -21,8 +21,6 @@ knitr::opts_chunk$set(
 
 # Introduction
 
-<img src="tools/logo.png" align="right"/>
-
 My son and I did an informal test of the tDCS (Transcranial Direct Current Stimulation) headset from [PlatoScience](https://www.platoscience.com/). We used the speed typing test available from [10fastfingers.com](https://10fastfingers.com/). We did a number of test sessions each, usually one per day, with between 4 and 12 tests per session. Each session was performed with either:
 
   - No headset (for some initial benchmark test)
