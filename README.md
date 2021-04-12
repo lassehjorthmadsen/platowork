@@ -33,4 +33,4 @@ A vignette with a small analysis of the results can be read from R Studio using:
 vignette("testing-platowork")
 ```
 
-Or accessed directely at: 
+Or accessed directely at: [rpubs.com/lassehjorthmadsen/753220](https://rpubs.com/lassehjorthmadsen/753220)
