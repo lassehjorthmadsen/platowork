@@ -22,6 +22,12 @@ plato <- plato %>%
   select(-time_diff) %>%
   ungroup()
 
+# Recode stimulus labels into "real" values -- revealed *after* the experiment:
+plato <- plato %>%
+  mutate(stimulus = case_when(stimulus == "A" ~ "Sham",
+                              stimulus == "B" ~ "Real",
+                              TRUE ~ stimulus))
+
 # Add data file to the package
 usethis::use_data(plato, overwrite = TRUE)
 
