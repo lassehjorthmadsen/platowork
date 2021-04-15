@@ -51,7 +51,7 @@ library(platowork)
 head(plato)
 ```
 
-Each row represents the result of a speed typing test. Each test has a date/time stamp; a subject (the person doing the test); a wpm (words per minute) performance score; an error rate; a stimulus ("none", "A" or "B", were either "A" or "B" is a placebo-like stimulus). Finally, since each test was taken several times in a row, we also have a session id. 
+Each row represents the result of a speed typing test. Each test has a date/time stamp; a subject (the person doing the test); a wpm (words per minute) performance score; an error rate; a stimulus ("None", "Sham" or "Real", were "Sham" is a placebo-like stimulus). Finally, since each test was taken several times in a row, we also have a session id. 
 
 Below is a quick summary of the data, with a duration in minutes calculated for the sessions:
 
@@ -104,7 +104,7 @@ plato %>%
 
 By visual inspection alone, it is apparent that one subject (Villads) *perhaps* experienced enhanced learning from using the headset with real stimuli. The same cannot be said for Lasse: For me the green dots (real stimuli) were not higher on average than the blue dots (sham stimuli).
 
-Another way to look at the data is to inspect the estimated density plots, while adding the overall averages for each subject/stimuli combination. See below:
+Another way to look at the data is to inspect the estimated density plots, while adding the overall averages for each subject/stimulus combination. See below:
 
 ```{r plot2}
 data_summary <- plato %>% 
