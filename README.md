@@ -1,7 +1,7 @@
 
 # platowork <img src="tools/logo.png" align="right"/>
 
-# An R Package with data from a test of the PlatoWork tDCS headset
+## An R Package with data from a test of the PlatoWork tDCS headset
 
 ## Background
 
