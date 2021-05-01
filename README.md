@@ -1,7 +1,7 @@
 
 # platowork <img src="tools/logo.png" align="right"/>
 
-[![Build Status](https://api.travis-ci.com/lassehjorthmadsen/platowork.svg?branch=master)](https://api.travis-ci.com/lassehjorthmadsen/platowork)
+[![Build Status](https://travis-ci.com/lassehjorthmadsen/platowork.svg?branch=main)](https://travis-ci.com/lassehjorthmadsen/platowork)
 
 ## An R Package with data from a test of the PlatoWork tDCS headset
 
