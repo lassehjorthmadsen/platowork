@@ -1,10 +1,10 @@
 ---
-title: "Testing the PlatoWork headset"
+title: "Testing the PlatoWork Headset"
 output: rmarkdown::html_vignette
 author: Lasse Hjorth Madsen
 date: "`r format(Sys.time(), '%Y %B %d')`"
 vignette: >
-  %\VignetteIndexEntry{Testing the PlatoWork headset}
+  %\VignetteIndexEntry{Testing the PlatoWork Headset}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

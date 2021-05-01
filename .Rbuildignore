@@ -5,4 +5,4 @@
 ^doc$
 ^Meta$
 ^\.travis\.yml$
-rsconnect/
+^vignettes/rsconnect
