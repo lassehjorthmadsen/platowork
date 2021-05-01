@@ -34,7 +34,7 @@ Sham stimulus and real stimulus refers to either a placebo or an actual direct c
 # R Package    
 The R package `platowork` provides a small data set with the results of our experiments. It also includes the vignette you are reading now, with some examples of how the data can be analyzed.
 
-The R package is available from GitHub here: [https://github.com/lassehjorthmadsen/platowork](https://github.com/lassehjorthmadsen/platowork). It can be installed directly from Github with `devtools::install_github("https://github.com/lassehjorthmadsen/platowork")`.
+The R package is available from GitHub here: [https://github.com/lassehjorthmadsen/platowork](https://github.com/lassehjorthmadsen/platowork). It can be installed directly from Github with `devtools::install_github("https://github.com/lassehjorthmadsen/platowork", build_vignettes = T)`.
 
 The purpose of the package is to make the data available to those interested. It may be useful as an example data set to teach, practice, or demo basic statistical techniques and visualizations. (See below.)
 
