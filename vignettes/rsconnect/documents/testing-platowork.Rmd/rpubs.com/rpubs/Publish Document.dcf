@@ -1,4 +1,4 @@
-name: Document
+name: Publish Document
 title:
 username:
 account: rpubs
@@ -6,6 +6,6 @@ server: rpubs.com
 hostUrl: rpubs.com
 appId: https://api.rpubs.com/api/v1/document/764374/69ce1a8921c94caeb2ae1cf10f2cfe49
 bundleId: https://api.rpubs.com/api/v1/document/764374/69ce1a8921c94caeb2ae1cf10f2cfe49
-url: http://rpubs.com/publish/claim/764374/b23016292d1c454e97e8c1fcd21dc1c1
-when: 1620049300.13101
-lastSyncTime: 1620049300.13101
+url: http://rpubs.com/lassehjorthmadsen/764374
+when: 1620049569.98519
+lastSyncTime: 1620049569.98519

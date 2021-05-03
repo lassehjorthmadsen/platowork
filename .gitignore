@@ -6,6 +6,5 @@ inst/doc
 *.xlsx
 doc
 Meta
-rsconnect/
 /doc/
 /Meta/

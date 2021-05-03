@@ -6,7 +6,7 @@
 #' @format A data frame with 225 rows and 6 variables:
 #' \describe{
 #'   \item{date}{time of test}
-#'   \item{subject}{name of person doint the typing test}
+#'   \item{subject}{name of person doing the typing test}
 #'   \item{wpm}{words per minute in typing test}
 #'   \item{error}{error rate in typing test}
 #'   \item{stimulus}{type of stimulus}

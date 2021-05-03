@@ -15,7 +15,7 @@ We (my son and I) used the speed typing test at [10fastfingers.com](https://10fa
   - Headset with "stimulus A" 
   - Headset with "stimulus B"
 
-Stimuli A and B referes to either a placebo or an actual direct current stimulation. Only after the test, we learned which was which. This functionality was available from a research version of the PlatoWork app.    
+Stimuli A and B refers to either a placebo or an actual direct current stimulation. Only after the test, we learned which was which. This functionality was available from a research version of the PlatoWork app.    
 
 ## Installation    
 
@@ -35,4 +35,4 @@ A vignette with a small analysis of the results can be read from R Studio using:
 vignette("testing-platowork")
 ```
 
-Or accessed directely at: [rpubs.com/lassehjorthmadsen/753220](https://rpubs.com/lassehjorthmadsen/753220)
+Or accessed directly at: [https://rpubs.com/lassehjorthmadsen/764374](https://rpubs.com/lassehjorthmadsen/764374)

@@ -40,7 +40,7 @@ The purpose of the package is to make the data available to those interested. It
 
 The data and analysis may also be interesting to those who have experiences with tDCS themselves.
 
-This vignette can be read from R Studio using: `vignette("testing-platowork")` or accessed directly at [rpubs.com/lassehjorthmadsen/753220](https://rpubs.com/lassehjorthmadsen/753220).
+This vignette can be read from R Studio using: `vignette("testing-platowork")` or accessed directly at [https://rpubs.com/lassehjorthmadsen/764374](https://rpubs.com/lassehjorthmadsen/764374).
 
 # Data    
 
@@ -171,7 +171,7 @@ With a P-value of `r summary(m)[[1]][["Pr(>F)"]][[1]] %>% round(2)` indicating n
 
 This is because I got slightly better results on average with sham stimuli, while my son got better results with real stimuli. 
 
-But the fact that we type at different speeds, also inflates the within-group variance at the ANOVA test above. In other words: The dependent variable, wpm, looks extra volatile, since we are looking at results from two different subjects. We could try to correct for that by standardizing the data, by subtracting the mean and deviding by the standard deviations, for each subject. (This is why we needed the `wpm_stand` variable calculated just before.)
+But the fact that we type at different speeds, also inflates the within-group variance at the ANOVA test above. In other words: The dependent variable, wpm, looks extra volatile, since we are looking at results from two different subjects. We could try to correct for that by standardizing the data, by subtracting the mean and dividing by the standard deviations, for each subject. (This is why we needed the `wpm_stand` variable calculated just before.)
 
 Standardizing enables us to build a model that focuses on individual *improvements* from individual *averages*:
 
@@ -224,7 +224,7 @@ This model takes into account both learning over time, use of headset, and indiv
 
 It is not easy to interpret, however, since each term only has meaning taking the other bits into consideration.
 
-If we want something more readily interpretable, we migth fit a linear model for each of the four combinations: 2 subjects x 2 stimuli. This is not efficient for estimation (we estimate more parameters that we need to), but it is simpler to interpret. Using the `purrr` package, it is easy to split the dataset, apply a model to each part, and pull out the part we want; here the slope of session parameter with corresponding p-value: 
+If we want something more readily interpretable, we might fit a linear model for each of the four combinations: 2 subjects x 2 stimuli. This is not efficient for estimation (we estimate more parameters that we need to), but it is simpler to interpret. Using the `purrr` package, it is easy to split the dataset, apply a model to each part, and pull out the part we want; here the slope of session parameter with corresponding p-value: 
 
 ```{r split_combine, echo=TRUE}
 library(purrr) # For map function
