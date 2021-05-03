@@ -1,13 +1,13 @@
 Package: platowork
-Title: Data From a Test of the PlatoWork tDCS Headset
+Title: Data from a Test of the PlatoWork tDCS Headset
 Version: 0.0.1
 Authors@R: 
     person(given = "Lasse",
            family = "Hjorth Madsen",
            role = c("aut", "cre"),
            email = "lassehjorthmadsen@gmail.com")
-Description: This package contains data from an experiment with improving touch 
-    typing speed, using the tDSC PlatoWork headset produced by PlatoScience.
+Description: Data set and analysis from an experiment with improving touch 
+    typing speed, using the tDCS PlatoWork headset produced by PlatoScience.
 URL: https://github.com/lassehjorthmadsen/platowork
 License: MIT + file LICENSE
 Encoding: UTF-8
