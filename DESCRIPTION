@@ -6,7 +6,7 @@ Authors@R:
            family = "Hjorth Madsen",
            role = c("aut", "cre"),
            email = "lassehjorthmadsen@gmail.com")
-Description: Data set and analysis from an experiment with improving touch 
+Description: Data and analysis from an experiment with improving touch 
     typing speed, using the tDCS PlatoWork headset produced by PlatoScience.
 URL: https://github.com/lassehjorthmadsen/platowork
 License: MIT + file LICENSE
