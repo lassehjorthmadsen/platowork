@@ -7,3 +7,4 @@
 ^\.travis\.yml$
 ^vignettes/rsconnect
 cran-comments.md
+^CRAN-RELEASE$
